@@ -9,7 +9,7 @@ spec:
     runAsGroup: 50012
   containers:
     - name: example-container
-      image: ghcr.io/sawyerczupka/d622_tmp:latest # image name
+      image: ghcr.io/sawyerczupka/d622_tmp # image name
       resources:
         requests: # minimum resources
           memory: "16Gi"
@@ -28,5 +28,5 @@ spec:
       nfs:
         server: 128.239.56.166
         path: /sciclone/home/sczupka/git/
-  # imagePullSecrets:
-  #   - name: ghcr-secret
+  imagePullSecrets:
+    - name: ghcr-secret
