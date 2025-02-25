@@ -7,8 +7,6 @@ spec:
   securityContext:
     runAsUser: 237827 # run id command in terminal to get your UID
     runAsGroup: 50012
-  imagePullSecrets:
-    - name: ghcr-secret
   containers:
     - name: example-container
       image: ghcr.io/sawyerczupka/d622_tmp:latest # image name
@@ -30,5 +28,5 @@ spec:
       nfs:
         server: 128.239.56.166
         path: /sciclone/home/sczupka/git/
-  imagePullSecrets:
-    - name: ghcr-secret
+  # imagePullSecrets:
+  #   - name: ghcr-secret
