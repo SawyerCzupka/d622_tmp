@@ -28,5 +28,5 @@ spec:
       nfs:
         server: 128.239.56.166
         path: /sciclone/home/sczupka/git/
-  imagePullSecrets:
-    - name: ghcr-secret
+  #imagePullSecrets:
+  #  - name: ghcr-secret
