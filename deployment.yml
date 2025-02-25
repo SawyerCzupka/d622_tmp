@@ -9,7 +9,7 @@ spec:
     runAsGroup: 50012
   containers:
     - name: example-container
-      image: ghcr.io/sawyerczupka/d622_tmp # image name
+      image: ghcr.io/sawyerczupka/d622_tmp:sha256-be8d5853dc059e515d91a2b388fdc2e0113f27e7441fe005cf7d27f75d504e4b.sig # image name
       resources:
         requests: # minimum resources
           memory: "16Gi"
