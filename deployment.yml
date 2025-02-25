@@ -13,10 +13,10 @@ spec:
       resources:
         requests: # minimum resources
           memory: "16Gi"
-          cpu: "8"
+          cpu: "64"
         limits: # maximum resources
           memory: "24Gi"
-          cpu: "16"
+          cpu: "64"
       volumeMounts:
         - name: home
           mountPath: "/app"
