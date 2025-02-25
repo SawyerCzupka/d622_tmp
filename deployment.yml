@@ -3,12 +3,12 @@ kind: Pod
 metadata:
   name: example-container
 spec:
-#  activeDeadlineSeconds: 1800  # Pod terminates after 30 min
+  #  activeDeadlineSeconds: 1800  # Pod terminates after 30 min
   securityContext:
     runAsUser: 260433 # run id command in terminal to get your UID
   containers:
     - name: example-container
-      image: ghcr.io/location/your_image_name:tag  # image name
+      image: ghcr.io/sawyerczupka/d622_tmp:latest # image name
       resources:
         requests: # minimum resources
           memory: "16Gi"
@@ -17,15 +17,15 @@ spec:
           memory: "24Gi"
           cpu: "16"
       volumeMounts:
-      - name: home
-        mountPath: "/app"
+        - name: home
+          mountPath: "/app"
       command: ["/bin/sh"]
       stdin: true
       tty: true
   volumes:
-  - name: home
-    nfs:
-      server: 128.239.56.166
-      path: /sciclone/home/your_username/repos/your_repo_name
+    - name: home
+      nfs:
+        server: 128.239.56.166
+        path: /sciclone/home/sczupka/git/
   imagePullSecrets:
-  - name: ghcr-secret
+    - name: ghcr-secret
